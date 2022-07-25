@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { DataTable } from "./styledcomponents";
+import "./index.css";
 function Table(props) {
   // Generate Row Numbers using rowIndex
-  useEffect(() => {
-   
-  },);
+  useEffect(() => {});
 
   return (
     <DataTable>
@@ -30,6 +29,7 @@ function Table(props) {
             <td>{film.genre}</td>
             <td>{film.director}</td>
             <td>{film.title}</td>
+            <td></td>
           </tr>
         ))}
       </tbody>
