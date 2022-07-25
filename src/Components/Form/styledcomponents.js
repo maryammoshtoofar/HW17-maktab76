@@ -12,10 +12,11 @@ export const StyledForm = styled.form`
   gap: 40px;
 `;
 
-export const StyledSmallForm = styled(StyledForm)`
-  border: none;
-  border-radius: none;
-  gap: 10px;
+export const StyledSmallContainer = styled.div`
+  background-color: #515050;
+  display: grid;
+  grid-template-columns: auto auto;
+  
 `;
 
 export const ButtonContainer = styled.div`

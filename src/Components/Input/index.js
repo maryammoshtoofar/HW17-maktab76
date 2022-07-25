@@ -7,14 +7,20 @@ import {
 } from "./styledcomponents";
 
 function Input(props) {
-  const { label, placeholder, name } = props;
+  const { label, placeholder, name, width, height } = props;
   return (
     <InputContainer>
       <LabelContainer>
         <Label htmlFor={name}>{label}</Label>
         <SmallRect />
       </LabelContainer>
-      <InputElement name={name} type="text" placeholder={placeholder} />
+      <InputElement
+        name={name}
+        type="text"
+        placeholder={placeholder}
+        width={width}
+        height={height}
+      />
     </InputContainer>
   );
 }
