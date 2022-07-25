@@ -3,7 +3,7 @@ import {
   StyledSmallContainer,
   ButtonContainer,
 } from "./styledcomponents";
-import Input from "../Input";
+import Input from "../Inputs";
 import FormButton from "../Button";
 
 function Form() {
