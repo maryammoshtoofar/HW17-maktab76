@@ -10,7 +10,7 @@ import Popup from "reactjs-popup";
 import { AiOutlineClose } from "react-icons/ai";
 
 function Table(props) {
-  useEffect(() => {});
+
 
   return (
     <DataTable>

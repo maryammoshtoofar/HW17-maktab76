@@ -8,5 +8,3 @@ export const Button = styled.button`
   font-size: 18px;
   border-radius: 5px;
 `;
-// bg="#F6C90E" color="#797049"
-// bg="#515050" color="#C5C5C5"

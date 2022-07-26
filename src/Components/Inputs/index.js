@@ -7,7 +7,17 @@ import {
 } from "./StyledComponents";
 
 function Input(props) {
-  const { label, placeholder, name, width, height } = props;
+  const validate = (name) => {
+    console.log("validated");
+    console.log(name);
+    // this.validateName();
+    // this.validateFamilyName();
+    // this.validatePhone();
+    // this.validateEmail();
+    // this.validateSelect();
+  };
+  const { label, placeholder, name, width, height, handelChange, value } =
+    props;
   return (
     <InputContainer>
       <LabelContainer>
@@ -15,6 +25,8 @@ function Input(props) {
         <SmallRect />
       </LabelContainer>
       <InputElement
+        value={value}
+        onChange={(e) => handelChange(e)}
         name={name}
         type="text"
         placeholder={placeholder}

@@ -1,10 +1,11 @@
 import { Select, InputContainer } from "./StyledComponents";
 
 function SelectInput(props) {
-  const { label, placeholder, name, width, height } = props;
+  const { label, placeholder, name, width, height, value, handelChange } =
+    props;
   return (
     <InputContainer>
-      <Select>
+      <Select value={value} onChange={(e) => handelChange(e)}>
         <option>وحشت/تخیلی</option>
         <option>درام</option>
         <option>تاریخی</option>
