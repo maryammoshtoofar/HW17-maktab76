@@ -2,16 +2,16 @@ import {
   StyledForm,
   StyledSmallContainer,
   ButtonContainer,
-} from "./styledcomponents";
+} from "./StyledComponents";
 import Input from "../Inputs";
 import FormButton from "../Button";
+import SelectInput from "../Inputs/selectInput";
 
 function Form() {
   return (
     <StyledForm>
       <StyledSmallContainer>
-        <Input label="ژانر فیلم" name="name" placeholder="وحشت/هیجانی" />
-
+        <SelectInput/>
         <Input
           label="نام فیلم"
           name="name"
@@ -37,10 +37,10 @@ function Form() {
           height="true"
         />
         <ButtonContainer>
-          <FormButton bg="#F6C90E" color="#797049">
+          <FormButton primary>
             ذخیره
           </FormButton>
-          <FormButton bg="#515050" color="#C5C5C5">
+          <FormButton>
             انصراف
           </FormButton>
         </ButtonContainer>

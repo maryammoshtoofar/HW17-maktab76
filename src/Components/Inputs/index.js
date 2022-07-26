@@ -4,7 +4,7 @@ import {
   Label,
   InputElement,
   SmallRect,
-} from "./styledcomponents";
+} from "./StyledComponents";
 
 function Input(props) {
   const { label, placeholder, name, width, height } = props;

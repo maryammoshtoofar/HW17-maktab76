@@ -48,3 +48,13 @@ export const InputElement = styled.input`
     border: 5px solid black;
   }
 `;
+
+export const Select = styled.select`
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid #868686;
+  border-radius: 5px;
+  color: #c4c4c4;
+  font-size: 18px;
+  height: 40px;
+`;
