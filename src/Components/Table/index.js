@@ -1,6 +1,14 @@
 import React, { useEffect } from "react";
-import { DataTable } from "./styledcomponents";
+import {
+  DataTable,
+  PopupContent,
+  PopupText,
+  ClosePopup,
+} from "./styledcomponents";
 import "./index.css";
+import Popup from "reactjs-popup";
+import { AiOutlineClose } from "react-icons/ai";
+
 function Table(props) {
   useEffect(() => {});
 
@@ -23,7 +31,25 @@ function Table(props) {
               <button onClick={() => props.DeleteFilm(film.id)}>حذف</button>
             </td>
             <td>
-              <button>توضیحات</button>
+              <Popup
+                trigger={<button className="button"> توضیحات </button>}
+                modal
+              >
+                {(close) => (
+                  <PopupContent>
+                    <ClosePopup
+                      onClick={() => {
+                        console.log("modal closed ");
+                        close();
+                      }}
+                    >
+                      <AiOutlineClose size={24} />
+                      بستن
+                    </ClosePopup>
+                    <PopupText>{film.description}</PopupText>
+                  </PopupContent>
+                )}
+              </Popup>
             </td>
             <td>{film.genre}</td>
             <td>{film.director}</td>
