@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { DataTable } from "./styledcomponents";
 import "./index.css";
 function Table(props) {
-  // Generate Row Numbers using rowIndex
   useEffect(() => {});
 
   return (
@@ -21,7 +20,7 @@ function Table(props) {
         {props.films.map((film) => (
           <tr key={film.id}>
             <td>
-              <button>حذف</button>
+              <button onClick={() => props.DeleteFilm(film.id)}>حذف</button>
             </td>
             <td>
               <button>توضیحات</button>
