@@ -17,7 +17,6 @@ export const StyledSmallContainer = styled.div`
   background-color: #515050;
   display: grid;
   grid-template-columns: auto auto;
-  
 `;
 
 export const ButtonContainer = styled.div`

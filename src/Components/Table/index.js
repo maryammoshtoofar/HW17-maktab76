@@ -8,7 +8,7 @@ import {
 } from "./styledcomponents";
 import "./index.css";
 import Popup from "reactjs-popup";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillDelete } from "react-icons/ai";
 
 function Table(props) {
   return (
@@ -29,6 +29,7 @@ function Table(props) {
           <tr key={film.id}>
             <td>
               <Button className="del" onClick={() => props.DeleteFilm(film.id)}>
+                <AiFillDelete size={12} />
                 حذف
               </Button>
             </td>

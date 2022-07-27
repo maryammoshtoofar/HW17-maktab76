@@ -18,7 +18,6 @@ export const PopupContent = styled.div`
 `;
 
 export const PopupText = styled.p`
-  border: 1px solid #595959;
   font-weight: bold;
   box-sizing: border-box;
   border-radius: 5px;
@@ -33,6 +32,10 @@ export const ClosePopup = styled.button`
   padding-bottom: 10px;
   font-size: 18px;
   cursor: pointer;
+
+  &&:hover {
+    color: #282c34;
+  }
 `;
 
 export const Button = styled.button`
@@ -44,4 +47,11 @@ export const Button = styled.button`
   border: ${(props) =>
     props.className === "del" ? "1px solid #EF4444" : "1px solid #19CAED"};
   cursor: pointer;
+  &&:hover {
+    background-color: ${(props) =>
+      props.className === "del" ? "#EF4444" : "#19CAED"};
+    outline: 2px solid #515050;
+    color: ${(props) => (props.className === "del" ? "#cfcfcf" : "#000")};
+    font-weight: bold;
+  }
 `;
