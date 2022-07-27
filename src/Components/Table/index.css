@@ -1,5 +1,6 @@
 table {
   counter-reset: rowNumber;
+  border-spacing: 20px;
 }
 
 td:last-child::before {

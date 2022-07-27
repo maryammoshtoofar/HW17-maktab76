@@ -4,6 +4,7 @@ export const DataTable = styled.table`
   width: 100%;
   background-color: #595959;
   text-align: right;
+  color: #cfcfcf;
 `;
 
 export const PopupContent = styled.div`
@@ -31,5 +32,16 @@ export const ClosePopup = styled.button`
   color: #6f6f6f;
   padding-bottom: 10px;
   font-size: 18px;
+  cursor: pointer;
+`;
+
+export const Button = styled.button`
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #cfcfcf;
+  background-color: transparent;
+  border: ${(props) =>
+    props.className === "del" ? "1px solid #EF4444" : "1px solid #19CAED"};
   cursor: pointer;
 `;

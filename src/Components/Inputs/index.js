@@ -10,13 +10,8 @@ function Input(props) {
   const validate = (name) => {
     console.log("validated");
     console.log(name);
-    // this.validateName();
-    // this.validateFamilyName();
-    // this.validatePhone();
-    // this.validateEmail();
-    // this.validateSelect();
   };
-  const { label, placeholder, name, width, height, handelChange, value } =
+  const { label, placeholder, name, width, height, handleChange, value } =
     props;
   return (
     <InputContainer>
@@ -26,7 +21,7 @@ function Input(props) {
       </LabelContainer>
       <InputElement
         value={value}
-        onChange={(e) => handelChange(e)}
+        onChange={(e) => handleChange(e)}
         name={name}
         type="text"
         placeholder={placeholder}

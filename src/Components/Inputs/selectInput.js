@@ -1,16 +1,15 @@
 import { Select, InputContainer } from "./StyledComponents";
 
 function SelectInput(props) {
-  const { label, placeholder, name, width, height, value, handelChange } =
-    props;
+  const { value, handleChange } = props;
   return (
     <InputContainer>
-      <Select value={value} onChange={(e) => handelChange(e)}>
-        <option>وحشت/تخیلی</option>
-        <option>درام</option>
-        <option>تاریخی</option>
-        <option>علمی تخیلی</option>
-        <option>جنگی</option>
+      <Select name="genre" onChange={(e) => handleChange(e)}>
+        <option value={value}>وحشت/هیجانی</option>
+        <option value="درام">درام</option>
+        <option value="تاریخی">تاریخی</option>
+        <option value="علمی تخیلی">علمی تخیلی</option>
+        <option value="جنگی">جنگی</option>
       </Select>
     </InputContainer>
   );

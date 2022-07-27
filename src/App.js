@@ -16,11 +16,30 @@ function App() {
     });
   };
 
+
+
   // Function to Delete the Films
   const DeleteFilm = (id) => {
     fetch(`http://localhost:3001/films/${id}`, { method: "DELETE" }).then(() =>
       GetApiData()
     );
+  };
+
+  const AddFilm = (newFilm) => {
+    // POST request using fetch inside useEffect React hook
+    let UpdatedFilms = [];
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newFilm),
+    };
+    fetch("http://localhost:3001/films", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        UpdatedFilms = [...films, data];
+        setFilms(UpdatedFilms);
+      });
   };
   useEffect(() => {
     GetApiData();
@@ -28,7 +47,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Form />
+      <Form AddFilm={AddFilm} />
       <Table films={films} DeleteFilm={DeleteFilm} />
     </div>
   );

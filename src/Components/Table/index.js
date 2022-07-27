@@ -4,14 +4,13 @@ import {
   PopupContent,
   PopupText,
   ClosePopup,
+  Button,
 } from "./styledcomponents";
 import "./index.css";
 import Popup from "reactjs-popup";
 import { AiOutlineClose } from "react-icons/ai";
 
 function Table(props) {
-
-
   return (
     <DataTable>
       <thead>
@@ -19,6 +18,7 @@ function Table(props) {
           <th>حذف</th>
           <th>توضیحات</th>
           <th>ژانر فیلم</th>
+          <th>سال ساخت</th>
           <th>کارگردان</th>
           <th>نام فیلم</th>
           <th>ردیف</th>
@@ -28,11 +28,13 @@ function Table(props) {
         {props.films.map((film) => (
           <tr key={film.id}>
             <td>
-              <button onClick={() => props.DeleteFilm(film.id)}>حذف</button>
+              <Button className="del" onClick={() => props.DeleteFilm(film.id)}>
+                حذف
+              </Button>
             </td>
             <td>
               <Popup
-                trigger={<button className="button"> توضیحات </button>}
+                trigger={<Button className="popup"> توضیحات </Button>}
                 modal
               >
                 {(close) => (
@@ -52,6 +54,7 @@ function Table(props) {
               </Popup>
             </td>
             <td>{film.genre}</td>
+            <td>{film.year}</td>
             <td>{film.director}</td>
             <td>{film.title}</td>
             <td></td>
